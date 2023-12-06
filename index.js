@@ -21,6 +21,12 @@ http.createServer((req, res)=>{
 
     }else if(req.url ==='/api'){
 
+        const headers =
+        {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+            "Content-Type": 'application/json'
+        };
         fs.readFile(path.join(__dirname,'public','db.json'),(err,content)=>{
             if (err) throw err ;
             res.writeHead(200, {'Content-Type': 'application/json'})
