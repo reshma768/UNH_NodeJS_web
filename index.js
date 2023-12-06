@@ -4,7 +4,7 @@ const path = require('path');
 http.createServer((req, res)=>{
     const headers =
         {
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "http://192.168.1.117:8080",
             "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
             "Content-Type": 'application/json'
         };
